@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="홈" />
+    <item
+        android:id="@+id/nav_location"
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:title="지역" />
+    <item
+        android:id="@+id/nav_near"
+        android:icon="@drawable/ic_baseline_near_me_24"
+        android:title="내주변" />
+    <item
+        android:id="@+id/nav_heart"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="찜" />
+    <item
+        android:id="@+id/nav_mypage"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="MY 야놀자" />
+</menu>

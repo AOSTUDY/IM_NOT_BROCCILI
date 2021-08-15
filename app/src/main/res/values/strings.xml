@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">aos study</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home_search_main">어디로 놀러갈까요?</string>
+</resources>
