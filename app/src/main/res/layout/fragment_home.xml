@@ -118,6 +118,17 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/cl_home_searchbar">
 
+                            <ImageView
+                                android:id="@+id/iv_home_search_line"
+                                android:layout_width="0dp"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="2dp"
+                                android:scaleType="fitXY"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tl_home"
+                                app:srcCompat="@drawable/bg_rect_line" />
+
                             <com.google.android.material.tabs.TabLayout
                                 android:id="@+id/tl_home"
                                 android:layout_width="match_parent"
@@ -132,17 +143,31 @@
                                 app:tabSelectedTextColor="#FF4081"
                                 app:tabTextAppearance="@style/HomeTabStyle"
                                 app:tabTextColor="@color/black"
-                                android:contentDescription="@null"/>
+                                android:contentDescription="@null">
+
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="추천"/>
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="국내여행"/>
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="즐길거리"/>
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="교통/항공"/>
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="해외여행"/>
+                            </com.google.android.material.tabs.TabLayout>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <ImageView
-                            android:id="@+id/iv_home_tab_line"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/bg_rect_line"
-                            app:layout_constraintTop_toBottomOf="@id/cl_home_tabs"
-                            app:layout_constraintStart_toStartOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 

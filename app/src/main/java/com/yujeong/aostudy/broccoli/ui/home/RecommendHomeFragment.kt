@@ -5,56 +5,140 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.yujeong.aostudy.broccoli.R
+import com.yujeong.aostudy.broccoli.databinding.FragmentHomeBinding
+import com.yujeong.aostudy.broccoli.databinding.FragmentRecommendHomeBinding
+import com.yujeong.aostudy.broccoli.ui.base.BaseFragment
+import com.yujeong.aostudy.broccoli.ui.home.adapter.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class RecommendHomeFragment : BaseFragment<FragmentRecommendHomeBinding>(R.layout.fragment_recommend_home) {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RecommendHomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class RecommendHomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private val recommendHomeViewModel : RecommendHomeViewModel by activityViewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
+
+        recommendHomeViewModel.setNewHotList()
+        setNewHotAdapter()
+        setNewHotListObserve()
+
+        recommendHomeViewModel.setEventList()
+        setEventAdapter()
+        setEventListObserve()
+
+        recommendHomeViewModel.setAdList()
+        setAdAdapter()
+        setAdListObserve()
+
+        recommendHomeViewModel.setTodayHotList()
+        setTodayHotAdapter()
+        setTodayHotListObserve()
+
+        recommendHomeViewModel.setDomesticList()
+        setDomesticAdapter()
+        setDomesticListObserve()
+
+        recommendHomeViewModel.setWeeklyList()
+        setWeeklyAdapter()
+        setWeeklyListObserve()
+
+        recommendHomeViewModel.setMagazineList()
+        setMagazineAdapter()
+        setMagazineListObserve()
+
+        return binding.root
+    }
+
+    private fun setNewHotAdapter(){
+       binding.rvRecommendNh.adapter = NewHotListAdapter()
+    }
+
+    private fun setNewHotListObserve() {
+       recommendHomeViewModel.newHotList.observe(viewLifecycleOwner){
+           newHotList -> with(binding.rvRecommendNh.adapter as NewHotListAdapter){
+               setNewHot(newHotList) }
+       }
+    }
+
+    private fun setEventAdapter(){
+        binding.rvRecommendEvent.adapter = EventListAdapter()
+    }
+
+    private fun setEventListObserve() {
+        recommendHomeViewModel.eventList.observe(viewLifecycleOwner){
+                newHotList -> with(binding.rvRecommendEvent.adapter as EventListAdapter){
+                setEvent(newHotList) }
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recommend_home, container, false)
+    private fun setAdAdapter(){
+        binding.vpRecommendAd1.apply {
+            adapter = AdListAdapter()
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    binding.tvAd1Page.text = "0${position + 1}/09"
+                }
+            })
+        }
+    }
+    private  fun setAdListObserve() {
+        recommendHomeViewModel.adList.observe(viewLifecycleOwner){
+            adList -> with(binding.vpRecommendAd1.adapter as AdListAdapter){
+                setAd(adList) }
+        }
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RecommendHomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RecommendHomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun setTodayHotAdapter(){
+        binding.rvRecommendToday.adapter = TodayHotListAdapter()
+    }
+
+    private fun setTodayHotListObserve(){
+        recommendHomeViewModel.todayHotList.observe(viewLifecycleOwner){
+            todayList -> with(binding.rvRecommendToday.adapter as TodayHotListAdapter){
+                setTodayHot(todayList)
+        }
+        }
+    }
+
+    private fun setDomesticAdapter(){
+        binding.rvRecommendLocal.adapter = DomesticListAdapter()
+    }
+    private fun setDomesticListObserve(){
+        recommendHomeViewModel.domesticList.observe(viewLifecycleOwner){
+            domesticList -> with(binding.rvRecommendLocal.adapter as DomesticListAdapter){
+                setDomestic(domesticList)
+        }
+        }
+    }
+
+    private fun setWeeklyAdapter(){
+        binding.rvRecommendWeekly.adapter = WeeklyListAdapter()
+    }
+
+    private fun setWeeklyListObserve(){
+        recommendHomeViewModel.weeklyList.observe(viewLifecycleOwner){
+            weeklyList -> with(binding.rvRecommendWeekly.adapter as WeeklyListAdapter){
+                setWeekly(weeklyList)
+        }
+        }
+    }
+
+    private fun setMagazineAdapter(){
+        binding.rvHomeMagazine.adapter = MagazineListAdapter()
+    }
+    private fun setMagazineListObserve(){
+        recommendHomeViewModel.magazineList.observe(viewLifecycleOwner){
+            magazineList -> with(binding.rvHomeMagazine.adapter as MagazineListAdapter){
+                setMagazine(magazineList)
+        }
+        }
     }
 }

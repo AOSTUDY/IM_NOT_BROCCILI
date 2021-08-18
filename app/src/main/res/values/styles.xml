@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ChipCustomStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="checkedIconEnabled">false</item>
+        <item name="checkedIcon">@null</item>
+    </style>
+</resources>

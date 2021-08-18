@@ -2,14 +2,15 @@ package com.yujeong.aostudy.broccoli.ui.home
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.tabs.TabLayoutMediator
 import com.yujeong.aostudy.broccoli.R
 import com.yujeong.aostudy.broccoli.databinding.FragmentHomeBinding
 import com.yujeong.aostudy.broccoli.ui.base.BaseFragment
+import com.yujeong.aostudy.broccoli.ui.home.*
 import com.yujeong.aostudy.broccoli.util.PagerFragmentStateAdapter
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home){
@@ -23,7 +24,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home){
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         mContext = requireContext()
-
+        
         initPager()
 
         return binding.root
@@ -50,5 +51,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home){
             }
         }.attach()
     }
+
 
 }

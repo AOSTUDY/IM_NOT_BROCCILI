@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="newhot"
+            type="com.yujeong.aostudy.broccoli.ui.home.model.NewHotData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:id="@+id/iv_home_nh_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_oval_pink" />
+
+        <ImageView
+            android:id="@+id/iv_home_nh_icon"
+            setSrc="@{newhot.imgId}"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_baseline_search_24" />
+
+        <TextView
+            android:id="@+id/tv_home_nh"
+            android:text="@{newhot.category}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_home_nh_bg"
+            app:layout_constraintStart_toStartOf="@+id/iv_home_nh_bg"
+            app:layout_constraintTop_toBottomOf="@+id/iv_home_nh_bg"
+            tools:text="고속버스" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

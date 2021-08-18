@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="event"
+            type="com.yujeong.aostudy.broccoli.ui.home.model.EventData" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            setSrc="@{event.imgId}"
+            android:id="@+id/iv_home_event_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_baseline_apartment_24" />
+
+        <TextView
+            android:text="@{event.name}"
+            android:id="@+id/tv_home_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_home_event_icon"
+            app:layout_constraintStart_toStartOf="@+id/iv_home_event_icon"
+            app:layout_constraintTop_toBottomOf="@+id/iv_home_event_icon"
+            tools:text="나만의 쿠폰" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

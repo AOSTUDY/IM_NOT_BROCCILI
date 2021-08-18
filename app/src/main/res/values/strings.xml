@@ -4,4 +4,35 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="home_search_main">어디로 놀러갈까요?</string>
+    <string name="home_recommend">추천</string>
+    <string name="home_domestic">국내숙소</string>
+    <string name="home_enjoy">즐길거리</string>
+    <string name="home_traffic">교통/항공</string>
+    <string name="home_foregin">해외여행</string>
+    
+    <string name="home_newhot">NEW &amp; HOT</string>
+    <string name="home_today_deal">오늘의 특가</string>
+    <string name="home_domestic_recommend">지금 여행가기 좋은 지역</string>
+    <string name="home_new_member_evnet1">야놀자가 처음이신가요?</string>
+    <string name="home_new_member_evnet2">회원가입 후 혜택을 받아보세요!</string>
+
+    <string name="home_weekly_hot">위클리 인기 Top</string>
+    <string name="home_all">전체보기</string>
+    <string name="home_hot_magazine">오늘의 인기 매거진</string>
+    <string name="home_recommend_categoty">찾고 계신 상품이 있나요?</string>
+
+    <string name="home_domestic_ex">호텔 / 프리미엄호텔 / 모텔 / 팬션 / 풀빌라 / 게스트하우스</string>
+    <string name="home_enjoy_ex">워터파크 / 수상레저 / 테마파크 / 모바일교환권 / 맛집 / 아이야놀자</string>
+    <string name="home_traffic_ex">KTX / 렌터카 / 고속버스 / 국내 항공권 / 해외 항공권</string>
+    <string name="home_foregin_ex">해외 숙소 / 해외 항공권 / 해외 여행자보험</string>
+
+    <string name="home_moblie_gift">모바일교환권</string>
+    <string name="home_pension">펜션</string>
+    <string name="home_hotel">호텔</string>
+    <string name="home_ticket">레저/티켓</string>
+    <string name="home_motel">모텔</string>
+    <string name="home_guesthouse">게스트하우스</string>
+
+
+
 </resources>
