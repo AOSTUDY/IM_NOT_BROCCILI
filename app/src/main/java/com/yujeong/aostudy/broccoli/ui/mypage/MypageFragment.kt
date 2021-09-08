@@ -10,13 +10,6 @@ import com.yujeong.aostudy.broccoli.databinding.FragmentHomeBinding
 import com.yujeong.aostudy.broccoli.databinding.FragmentMypageBinding
 import com.yujeong.aostudy.broccoli.ui.base.BaseFragment
 
-class MypageFragment : BaseFragment<FragmentMypageBinding>(R.layout.fragment_mypage){
+class MypageFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
 }

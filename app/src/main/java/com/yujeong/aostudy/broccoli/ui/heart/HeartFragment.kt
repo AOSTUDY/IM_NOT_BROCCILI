@@ -10,14 +10,6 @@ import com.yujeong.aostudy.broccoli.databinding.FragmentHeartBinding
 import com.yujeong.aostudy.broccoli.databinding.FragmentHomeBinding
 import com.yujeong.aostudy.broccoli.ui.base.BaseFragment
 
+class HeartFragment : Fragment() {
 
-class HeartFragment : BaseFragment<FragmentHeartBinding>(R.layout.fragment_heart){
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
 }

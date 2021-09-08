@@ -10,13 +10,6 @@ import com.yujeong.aostudy.broccoli.databinding.FragmentHomeBinding
 import com.yujeong.aostudy.broccoli.databinding.FragmentLocationBinding
 import com.yujeong.aostudy.broccoli.ui.base.BaseFragment
 
-class LocationFragment : BaseFragment<FragmentLocationBinding>(R.layout.fragment_location){
+class LocationFragment : Fragment(){
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
 }

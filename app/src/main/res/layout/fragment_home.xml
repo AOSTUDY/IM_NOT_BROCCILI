@@ -38,7 +38,6 @@
                             android:id="@+id/cl_home_searchbar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            app:layout_collapseMode="parallax"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
@@ -64,7 +63,7 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="10dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toStartOf="@+id/iv_home_cart"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/tv_home_logo"
                                 app:layout_constraintTop_toTopOf="parent">
 
@@ -92,18 +91,20 @@
                                     app:layout_constraintEnd_toEndOf="@+id/tv_home_search"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/ic_baseline_search_24" />
+
+                                <ImageView
+                                    android:id="@+id/iv_home_cart"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:scaleType="fitXY"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
-                            <ImageView
-                                android:id="@+id/iv_home_cart"
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginEnd="10dp"
-                                android:scaleType="fitXY"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <!-- pin: 스크롤 시 고정 app:layout_collapseMode="pin"-->

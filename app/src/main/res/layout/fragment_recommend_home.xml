@@ -129,6 +129,7 @@
                         android:id="@+id/vp_recommend_ad1"
                         android:layout_width="match_parent"
                         android:layout_height="170dp" />
+
                 </com.yujeong.aostudy.broccoli.util.NestedScrollableHost>
 
                 <androidx.constraintlayout.widget.ConstraintLayout

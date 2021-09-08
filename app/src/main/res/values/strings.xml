@@ -9,7 +9,7 @@
     <string name="home_enjoy">즐길거리</string>
     <string name="home_traffic">교통/항공</string>
     <string name="home_foregin">해외여행</string>
-    
+
     <string name="home_newhot">NEW &amp; HOT</string>
     <string name="home_today_deal">오늘의 특가</string>
     <string name="home_domestic_recommend">지금 여행가기 좋은 지역</string>
@@ -32,7 +32,5 @@
     <string name="home_ticket">레저/티켓</string>
     <string name="home_motel">모텔</string>
     <string name="home_guesthouse">게스트하우스</string>
-
-
 
 </resources>

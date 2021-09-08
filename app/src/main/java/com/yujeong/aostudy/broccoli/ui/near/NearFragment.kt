@@ -10,13 +10,6 @@ import com.yujeong.aostudy.broccoli.databinding.FragmentHomeBinding
 import com.yujeong.aostudy.broccoli.databinding.FragmentNearBinding
 import com.yujeong.aostudy.broccoli.ui.base.BaseFragment
 
-class NearFragment : BaseFragment<FragmentNearBinding>(R.layout.fragment_near){
+class NearFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
 }
