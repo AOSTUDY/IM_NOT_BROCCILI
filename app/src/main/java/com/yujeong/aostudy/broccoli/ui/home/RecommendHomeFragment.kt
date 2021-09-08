@@ -13,10 +13,11 @@ import com.yujeong.aostudy.broccoli.databinding.FragmentHomeBinding
 import com.yujeong.aostudy.broccoli.databinding.FragmentRecommendHomeBinding
 import com.yujeong.aostudy.broccoli.ui.base.BaseFragment
 import com.yujeong.aostudy.broccoli.ui.home.adapter.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RecommendHomeFragment : BaseFragment<FragmentRecommendHomeBinding>(R.layout.fragment_recommend_home) {
 
-    private val recommendHomeViewModel : RecommendHomeViewModel by activityViewModels()
+    private val recommendHomeViewModel : RecommendHomeViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,

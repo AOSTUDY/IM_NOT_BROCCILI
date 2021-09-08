@@ -24,7 +24,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home){
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         mContext = requireContext()
-        
+
         initPager()
 
         return binding.root
@@ -43,11 +43,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home){
 
         TabLayoutMediator(binding.tlHome, binding.vpHomeMain){ tab, position ->
             when(position){
-                0 -> tab.text = "추천"
-                1 -> tab.text = "국내숙소"
-                2 -> tab.text = "즐길거리"
-                3 -> tab.text = "교통/항공"
-                4 -> tab.text = "해외여행"
+                0 -> tab.text = getString(R.string.home_recommend)
+                1 -> tab.text =  getString(R.string.home_domestic)
+                2 -> tab.text =  getString(R.string.home_enjoy)
+                3 -> tab.text =  getString(R.string.home_traffic)
+                4 -> tab.text = getString(R.string.home_foregin)
             }
         }.attach()
     }
