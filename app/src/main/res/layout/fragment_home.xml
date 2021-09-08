@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/al_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:stateListAnimator="@null">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    app:contentScrim="@color/white"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_home_searchbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_home_logo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Yanolja"
+                                android:textColor="#FF4081"
+                                android:textSize="20sp"
+                                android:textStyle="bold|italic"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/tv_home_logo"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/tv_home_search"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_home_search"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="8dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="8dp"
+                                    android:text="@string/home_search_main"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="7dp"
+                                    app:layout_constraintEnd_toEndOf="@+id/tv_home_search"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_baseline_search_24" />
+
+                                <ImageView
+                                    android:id="@+id/iv_home_cart"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:scaleType="fitXY"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <!-- pin: 스크롤 시 고정 app:layout_collapseMode="pin"-->
+                        <!-- parallax: 스크롤 시 접힘 -->
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_home_tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-5dp"
+                            app:layout_collapseMode="pin"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_home_searchbar">
+
+                            <ImageView
+                                android:id="@+id/iv_home_search_line"
+                                android:layout_width="0dp"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="2dp"
+                                android:scaleType="fitXY"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tl_home"
+                                app:srcCompat="@drawable/bg_rect_line" />
+
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tl_home"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tabIconTint="@null"
+                                app:tabIndicatorColor="#FF4081"
+                                app:tabIndicatorFullWidth="false"
+                                app:tabRippleColor="#787878"
+                                app:tabSelectedTextColor="#FF4081"
+                                app:tabTextAppearance="@style/HomeTabStyle"
+                                app:tabTextColor="@color/black"
+                                android:contentDescription="@null">
+
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="추천"/>
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="국내여행"/>
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="즐길거리"/>
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="교통/항공"/>
+                                <com.google.android.material.tabs.TabItem
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="해외여행"/>
+                            </com.google.android.material.tabs.TabLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_home_main"
+                android:layout_width="match_parent"
+                android:layout_height="652dp"
+                android:overScrollMode="never"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

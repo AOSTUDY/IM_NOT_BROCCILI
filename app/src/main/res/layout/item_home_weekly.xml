@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="weekly"
+            type="com.yujeong.aostudy.broccoli.ui.home.model.WeeklyData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_home_weekly"
+            setSrc="@{weekly.imgId}"
+            android:scaleType="fitXY"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_weekly_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#99000000"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/iv_home_weekly"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_weekly"
+            tools:text="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@{weekly.name}"
+            tools:text="[스타벅스] 아이스 시그니처 초쿨릿 Tall"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/iv_home_weekly"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            setPrice="@{weekly.price}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text = "7,200원" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
