@@ -49,7 +49,7 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="15dp"
                                 android:layout_marginBottom="20dp"
-                                android:text="Yanolja"
+                                android:text="코나A"
                                 android:textColor="#FF4081"
                                 android:textSize="20sp"
                                 android:textStyle="bold|italic"
@@ -92,16 +92,6 @@
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/ic_baseline_search_24" />
 
-                                <ImageView
-                                    android:id="@+id/iv_home_cart"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_marginTop="16dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:scaleType="fitXY"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -153,19 +143,12 @@
                                 <com.google.android.material.tabs.TabItem
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="국내여행"/>
+                                    android:text="실시간"/>
                                 <com.google.android.material.tabs.TabItem
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="즐길거리"/>
-                                <com.google.android.material.tabs.TabItem
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="교통/항공"/>
-                                <com.google.android.material.tabs.TabItem
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="해외여행"/>
+                                    android:text="콘텐츠"/>
+
                             </com.google.android.material.tabs.TabLayout>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>

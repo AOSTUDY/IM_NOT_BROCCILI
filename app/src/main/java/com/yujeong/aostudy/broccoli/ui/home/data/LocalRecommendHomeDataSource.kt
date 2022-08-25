@@ -6,7 +6,7 @@ import com.yujeong.aostudy.broccoli.ui.home.model.*
 class LocalRecommendHomeDataSource : RecommendHomeDataSource {
     override fun getAdData(): List<AdData> {
         return listOf(
-            AdData(R.drawable.home_event_ad1),
+            AdData(R.drawable.home_event_ad0),
             AdData(R.drawable.home_event_ad2),
             AdData(R.drawable.home_event_ad3),
             AdData(R.drawable.home_event_ad1),
@@ -20,10 +20,10 @@ class LocalRecommendHomeDataSource : RecommendHomeDataSource {
 
     override fun getDomesticData(): List<DomesticData>{
         return listOf(
-            DomesticData(R.drawable.home_deal_ad1, "제주도"),
-            DomesticData(R.drawable.home_deal_ad2, "강원도"),
-            DomesticData(R.drawable.home_deal_ad3, "부산"),
-            DomesticData(R.drawable.home_deal_ad1, "경상북도")
+            DomesticData(R.drawable.home_deal_ad1, "하루 상식"),
+            DomesticData(R.drawable.home_deal_ad2, "생활 꿀팁"),
+            DomesticData(R.drawable.home_deal_ad3, "기초 예절"),
+            DomesticData(R.drawable.home_deal_ad1, "뉴스")
         )
     }
 
@@ -65,10 +65,10 @@ class LocalRecommendHomeDataSource : RecommendHomeDataSource {
 
     override fun getMagazineData(): List<MagazineData> {
         return listOf(
-            MagazineData(R.drawable.home_deal_ad1, "숙소",
-                "숲 속 언택트 힐링\n홍천 부티크 풀빌라"),
-            MagazineData(R.drawable.home_deal_ad2, "숙소",
-                "국내 1위로 뽑혔다는\n강릉 오션뷰 풀빌라"),
+            MagazineData(R.drawable.m_wood, "공예",
+                "나만의 생활 가구 만들기\n영등포 별별 나무공방"),
+            MagazineData(R.drawable.m_coffee, "바리스타",
+                "김선생님이 직접 알려주는 \n바리스타 직업 훈련"),
             MagazineData(R.drawable.home_deal_ad3, "숙소",
                 "1시간 이상이면 갈 수 있는\n근교 숲캉스 숙소"),
             MagazineData(R.drawable.home_deal_ad1, "숙소",
@@ -89,30 +89,27 @@ class LocalRecommendHomeDataSource : RecommendHomeDataSource {
     override fun getNewHotData(): List<NewHotData> {
         return listOf(
             NewHotData(
-                R.drawable.ic_baseline_directions_bus_24, "고속버스"
+                R.drawable.ic_baseline_directions_bus_24, "운전 교육"
             ),
             NewHotData(
-                R.drawable.ic_baseline_apartment_24, "풀빌라"
+                R.drawable.ic_baseline_apartment_24, "컴퓨터"
             ),
             NewHotData(
-                R.drawable.ic_baseline_pool_24, "물놀이특가"
+                R.drawable.ic_baseline_pool_24, "수영 특가"
             ),
             NewHotData(
-                R.drawable.ic_baseline_child_care_24, "아이야놀자"
+                R.drawable.ic_baseline_child_care_24, "어린이체험"
             ),
             NewHotData(
-                R.drawable.ic_baseline_food_bank_24, "호캉스패키지"
-            ),
-            NewHotData(
-                R.drawable.ic_baseline_restaurant_menu_24, "맛집"
+                R.drawable.ic_baseline_food_bank_24, "요리교실"
             )
         )
     }
 
     override fun getTodayData(): List<TodayHotData> {
         return listOf(
-            TodayHotData(R.drawable.home_deal_ad1),
-            TodayHotData(R.drawable.home_deal_ad2),
+            TodayHotData(R.drawable.lecture1),
+            TodayHotData(R.drawable.lecture2),
             TodayHotData(R.drawable.home_deal_ad3),
             TodayHotData(R.drawable.home_deal_ad1),
             TodayHotData(R.drawable.home_deal_ad2),
@@ -122,12 +119,12 @@ class LocalRecommendHomeDataSource : RecommendHomeDataSource {
 
     override fun getWeeklyData(): List<WeeklyData> {
         return listOf(
-            WeeklyData(R.drawable.home_event_ad1, "[스타벅스] 아이스 시그니처 초콜릿 TALL",
-                5300),
-            WeeklyData(R.drawable.home_event_ad2, "[빽다방] 금액상품권 1만원",
-                10000),
-            WeeklyData(R.drawable.home_event_ad3, "[스타벅스] 하루 한 컵 레드",
-                2600)
+            WeeklyData(R.drawable.w_princess, "[공연] 어린이 뮤지컬 인어공주",
+                8800),
+            WeeklyData(R.drawable.w_draw, "[체험] 궁중 * 민화 _ OO 박물관",
+                20000),
+            WeeklyData(R.drawable.w_pic, "[전시] 뭔그아 므엇진 사진전",
+                12000)
         )
     }
 

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="recommendInfo"
+            type="com.yujeong.aostudy.broccoli.ui.home.model.LocationModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_one_recommend1"
+                setRound10SrcFromUrl="@{recommendInfo.image}"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/excel1" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toEndOf="@id/iv_one_recommend1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/bat"/>
+
+            <TextView
+                android:id="@+id/tv_one_recommend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="47dp"
+                android:layout_marginStart="10dp"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@{recommendInfo.name}"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tv_one_recommend_info"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="22년 3분기 비지니스 엑셀 중급반"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tv_one_recommend_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:textSize="13sp"
+                android:background="@drawable/bg_round_pink"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="43dp"
+                app:layout_constraintStart_toEndOf="@id/iv_one_recommend1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@{recommendInfo.when1}"
+                tools:text="D-3"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tv_one_recommend_price"
+                android:text ="@{recommendInfo.when2}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_one_recommend_info"
+                app:layout_constraintTop_toBottomOf="@+id/tv_one_recommend_info"
+                tools:text="매주 토요일 14:00~16:00 \n 기간 : (22.09.01~22.10.30)"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <Button
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:text="@{recommendInfo.state}"
+                tools:text="접수 마감"
+                android:textSize="11dp"
+                android:backgroundTint="#000000"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/tv_one_recommend_price"
+                app:layout_constraintTop_toBottomOf="@id/tv_one_recommend_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="5dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

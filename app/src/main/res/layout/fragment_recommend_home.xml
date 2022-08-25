@@ -65,7 +65,7 @@
                 <ImageView
                     android:id="@+id/iv_recommend_nh_line"
                     android:layout_width="0dp"
-                    android:layout_height="5dp"
+                    android:layout_height="2dp"
                     android:layout_marginTop="15dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/bg_rect_line"
@@ -76,47 +76,12 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_recommend_event"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cl_recommend_nh">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_recommend_event"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:spanCount="5"
-                    tools:listitem="@layout/item_home_event" />
-
-                <ImageView
-                    android:id="@+id/iv_recommend_event_line"
-                    android:layout_width="0dp"
-                    android:layout_height="5dp"
-                    android:layout_marginTop="15dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/bg_rect_line"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rv_recommend_event" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_recommend_ad1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cl_recommend_event">
+                app:layout_constraintTop_toBottomOf="@+id/cl_recommend_nh">
 
                 <com.yujeong.aostudy.broccoli.util.NestedScrollableHost
                     android:layout_width="match_parent"
@@ -206,7 +171,7 @@
                 <ImageView
                     android:id="@+id/iv_recommend_today_line"
                     android:layout_width="0dp"
-                    android:layout_height="5dp"
+                    android:layout_height="3dp"
                     android:layout_marginTop="15dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/bg_rect_line"
@@ -347,7 +312,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
-                    android:text="지난주 구매 기반 인기 많은 순"
+                    android:text="지난주 지역 기반 인기 많은 순"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="@id/cl_recommend_weekly"
                     app:layout_constraintTop_toBottomOf="@id/tv_home_weekly" />
@@ -381,7 +346,7 @@
                         android:layout_height="wrap_content"
                         android:checked="true"
                         app:chipIcon="@null"
-                        android:text="모바일상품권"/>
+                        android:text="문화예술"/>
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chip_weekly_2"
@@ -389,7 +354,7 @@
                         android:theme="@style/Theme.MaterialComponents.Light"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="호텔"/>
+                        android:text="직업훈련"/>
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chip_weekly_3"
@@ -397,7 +362,7 @@
                         android:theme="@style/Theme.MaterialComponents.Light"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="레저 / 티켓"/>
+                        android:text="생활/취미"/>
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chip_weekly_4"
@@ -405,7 +370,7 @@
                         android:theme="@style/Theme.MaterialComponents.Light"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="모텔"/>
+                        android:text="티켓"/>
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chip_weekly_5"
@@ -413,7 +378,7 @@
                         android:theme="@style/Theme.MaterialComponents.Light"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="펜션"/>
+                        android:text="콘탠츠"/>
 
                 </com.google.android.material.chip.ChipGroup>
 
@@ -424,6 +389,7 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     android:orientation="vertical"
                     tools:listitem="@layout/item_home_weekly"
+                    tools:itemCount="3"
                     app:layout_constraintTop_toBottomOf="@+id/cg_home_weekly"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"/>
@@ -479,8 +445,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_home_magazine"
                     tools:listitem="@layout/item_home_magazine" />

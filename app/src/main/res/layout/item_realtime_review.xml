@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="recommendInfo"
+            type="com.yujeong.aostudy.broccoli.ui.home.model.ReviewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_one_recommend1"
+                setRound10SrcFromUrl="@{recommendInfo.image}"
+                android:layout_width="164dp"
+                android:layout_height="164dp"
+                android:scaleType="fitXY"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/r_frog" />
+
+            <TextView
+                android:id="@+id/tv_one_recommend_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:includeFontPadding="false"
+                android:text="@{recommendInfo.brand}"
+                app:layout_constraintStart_toStartOf="@+id/iv_one_recommend1"
+                app:layout_constraintTop_toBottomOf="@+id/iv_one_recommend1"
+                tools:text="dd 평생교육원"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tv_one_recommend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@{recommendInfo.name}"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_one_recommend_brand"
+                app:layout_constraintTop_toBottomOf="@+id/tv_one_recommend_brand"
+                tools:text="하루 한 개 완성 뜨개질"
+                android:maxLines="1"
+                android:ellipsize="end"/>/>
+
+            <TextView
+                android:id="@+id/tv_one_recommend_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_one_recommend_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_one_recommend_name"
+                android:text="@{recommendInfo.title}"
+                tools:text="뜨개구리가 뜰 수 있게 되었습니다"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tv_one_recommend_price"
+                android:text ="@{recommendInfo.review}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_one_recommend_info"
+                app:layout_constraintTop_toBottomOf="@+id/tv_one_recommend_info"
+                tools:text="예전부터 뜨개질을 배워보고 싶었는데"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

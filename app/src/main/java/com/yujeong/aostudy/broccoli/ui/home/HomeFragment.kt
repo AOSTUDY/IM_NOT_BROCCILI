@@ -36,8 +36,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home){
         pagerAdapter.addFragment(RecommendHomeFragment())
         pagerAdapter.addFragment(DomesticHomeFragment())
         pagerAdapter.addFragment(EnjoyHomeFragment())
-        pagerAdapter.addFragment(TrafficHomeFragment())
-        pagerAdapter.addFragment(ForeignHomeFragment())
 
         binding.vpHomeMain.adapter = pagerAdapter
 
@@ -46,8 +44,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home){
                 0 -> tab.text = getString(R.string.home_recommend)
                 1 -> tab.text =  getString(R.string.home_domestic)
                 2 -> tab.text =  getString(R.string.home_enjoy)
-                3 -> tab.text =  getString(R.string.home_traffic)
-                4 -> tab.text = getString(R.string.home_foregin)
             }
         }.attach()
     }

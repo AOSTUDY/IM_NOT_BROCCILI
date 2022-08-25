@@ -31,8 +31,8 @@ class RecommendHomeFragment : BaseFragment<FragmentRecommendHomeBinding>(R.layou
         setNewHotListObserve()
 
         recommendHomeViewModel.setEventList()
-        setEventAdapter()
-        setEventListObserve()
+//        setEventAdapter()
+//        setEventListObserve()
 
         recommendHomeViewModel.setAdList()
         setAdAdapter()
@@ -68,16 +68,16 @@ class RecommendHomeFragment : BaseFragment<FragmentRecommendHomeBinding>(R.layou
        }
     }
 
-    private fun setEventAdapter(){
-        binding.rvRecommendEvent.adapter = EventListAdapter()
-    }
+//    private fun setEventAdapter(){
+//        binding.rvRecommendEvent.adapter = EventListAdapter()
+//    }
 
-    private fun setEventListObserve() {
-        recommendHomeViewModel.eventList.observe(viewLifecycleOwner){
-                newHotList -> with(binding.rvRecommendEvent.adapter as EventListAdapter){
-                setEvent(newHotList) }
-        }
-    }
+//    private fun setEventListObserve() {
+//        recommendHomeViewModel.eventList.observe(viewLifecycleOwner){
+//                newHotList -> with(binding.rvRecommendEvent.adapter as EventListAdapter){
+//                setEvent(newHotList) }
+//        }
+//    }
 
     private fun setAdAdapter(){
         binding.vpRecommendAd1.apply {

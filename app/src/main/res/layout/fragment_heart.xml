@@ -1,20 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
 
     </data>
 
-    <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.heart.HeartFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/al_tool"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="heart" />
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:stateListAnimator="@null">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_home"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabIconTint="@null"
+                app:tabIndicatorColor="#FF4081"
+                app:tabIndicatorFullWidth="true"
+                app:tabRippleColor="#787878"
+                app:tabSelectedTextColor="#FF4081"
+                app:tabTextAppearance="@style/HomeTabStyle"
+                app:tabTextColor="@color/black"
+                android:contentDescription="@null">
 
-    </FrameLayout>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이력관리"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="보관함"/>
+
+            </com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/img_history"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:src="@drawable/h_pic1"
+            android:scaleType="fitXY"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/al_tool"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:src="@drawable/h_pic2"
+            app:layout_constraintTop_toBottomOf="@id/img_history"
+            android:scaleType="fitXY"
+            android:padding="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

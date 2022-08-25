@@ -59,7 +59,7 @@
                     android:layout_marginStart="15dp"
                     android:text="@{magazine.title}"
                     tools:text="숲 속 언택트 힐링 \n훙촌 뷰타쿠 풀빌라"
-                    android:textColor="#000000"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     card_view:layout_constraintBottom_toBottomOf="parent"
                     card_view:layout_constraintStart_toStartOf="parent"
